@@ -13,5 +13,13 @@ window.addEventListener('load', () => { // Se declanșează la momentul în care
         items[(vl - 1) % items.length].style.color = "darkred"
     })
 
-    
+    window.addEventListener("keyup", (e) => {
+        e.stopPropagation() 
+        const vl = e.key
+        if(vl < 1 || vl > 6)
+            return
+        items[(vl - 1) % items.length].style.backgroundColor = null // starea implicita (div-uri necolorate).
+        items[(vl - 1) % items.length].style.fontSize = null // starea implicita (font-size-ul setat in fisierul CSS).
+        items[(vl - 1) % items.length].style.color = null // culoarea fontului de text revine la normal.
+    })
 })
