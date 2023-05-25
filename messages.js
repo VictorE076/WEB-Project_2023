@@ -23,4 +23,11 @@ window.addEventListener('load', () => { // Se declanșează la momentul în care
         items[(vl - 1) % items.length].style.fontSize = null // starea implicita (font-size-ul setat in fisierul CSS).
         items[(vl - 1) % items.length].style.color = null // culoarea fontului de text revine la normal.
     })
+    ///
+    const header = document.getElementById("hdr")
+    const headerComputedStyle = window.getComputedStyle(header)
+    console.log(headerComputedStyle.fontFamily) // 'serif' font
+    const gbcr = header.getBoundingClientRect()
+    console.log(gbcr.top, gbcr.bottom)
+    console.log(gbcr.left, gbcr.right)
 })
