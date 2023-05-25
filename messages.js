@@ -6,6 +6,7 @@ window.addEventListener('load', () => { // Se declanșează la momentul în care
     window.addEventListener("keydown", (e) => { 
         e.stopPropagation()
         const vl = e.key
+        console.log(`Target: ${e.target.tagName}`) // See on the console the tagName of this event listener 
         if(vl < 1 || vl > 6)
             return
         items[(vl - 1) % items.length].style.backgroundColor = "greenyellow"
@@ -14,8 +15,8 @@ window.addEventListener('load', () => { // Se declanșează la momentul în care
     })
 
     window.addEventListener("keyup", (e) => {
-        e.stopPropagation() 
         const vl = e.key
+        console.log(`Current Target: ${e.currentTarget.tagName}`) // See on the console the tagName of the bubbled event listener (it is undefined)
         if(vl < 1 || vl > 6)
             return
         items[(vl - 1) % items.length].style.backgroundColor = null // starea implicita (div-uri necolorate).

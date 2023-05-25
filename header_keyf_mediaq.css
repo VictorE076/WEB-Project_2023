@@ -80,7 +80,7 @@ header:hover .title { /*se aplica doar pe .title, cand dam hover pe header*/
     #greatest:nth-child(1) {
         visibility: hidden;
     }
-    .drop_down:hover #ordered_list_1 {
+    .drop_down #ordered_list_1 {
         visibility: hidden;
     }
     #drop_down_menu_1 {
@@ -100,7 +100,7 @@ header:hover .title { /*se aplica doar pe .title, cand dam hover pe header*/
     #greatest:nth-child(1) {
         visibility: hidden;
     }
-    .drop_down:hover #ordered_list_1 {
+    .drop_down #ordered_list_1 {
         visibility: hidden;
     }
     #drop_down_menu_1 {
@@ -138,7 +138,7 @@ header:hover .title { /*se aplica doar pe .title, cand dam hover pe header*/
 #ordered_list_1 {
     display: none;
 }
-.drop_down:hover #ordered_list_1 {
+.drop_down:active #ordered_list_1 { /*cat timp tinem apasat click-stanga pe mouse este afisata lista*/
     display: block;
 }
 
